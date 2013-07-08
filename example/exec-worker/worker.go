@@ -13,7 +13,7 @@ import (
     "github.com/mikespook/golib/pid"
     "github.com/mikespook/golib/prof"
     "github.com/mikespook/golib/signal"
-    "github.com/mikespook/gearman-go/worker"
+    "github.com/jasonmoo/gearman-go/worker"
 )
 
 var (

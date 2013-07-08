@@ -11,7 +11,7 @@ import (
     "os/exec"
     "encoding/json"
     "github.com/mikespook/golib/log"
-    "github.com/mikespook/gearman-go/worker"
+    "github.com/jasonmoo/gearman-go/worker"
 )
 
 type outData struct {

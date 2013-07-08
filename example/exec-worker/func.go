@@ -7,7 +7,7 @@ package main
 
 import (
     "github.com/mikespook/golib/log"
-    "github.com/mikespook/gearman-go/worker"
+    "github.com/jasonmoo/gearman-go/worker"
 )
 
 func execShell(job *worker.Job) (result []byte, err error) {

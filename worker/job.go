@@ -7,7 +7,7 @@ package worker
 
 import (
 	"bytes"
-	"github.com/mikespook/gearman-go/common"
+	"github.com/jasonmoo/gearman-go/common"
 	"strconv"
 )
 

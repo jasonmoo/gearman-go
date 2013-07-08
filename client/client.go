@@ -12,7 +12,7 @@ import (
     "time"
     "bytes"
     "strconv"
-    "github.com/mikespook/gearman-go/common"
+    "github.com/jasonmoo/gearman-go/common"
 )
 
 var (
@@ -27,7 +27,7 @@ func init() {
 // handle, known, running, numerator, denominator
 type StatusHandler func(string, bool, bool, uint64, uint64)
 
-/* 
+/*
 The client side api for gearman
 
 usage:
@@ -82,7 +82,7 @@ func New(addr string) (client *Client, err error) {
 
 // {{{ private functions
 
-// 
+//
 func (client *Client) connect() (err error) {
     client.conn, err = net.Dial(common.NETWORK, client.addr)
     return

@@ -10,7 +10,7 @@ import (
     "time"
     "errors"
     "math/rand"
-    "github.com/mikespook/gearman-go/common"
+    "github.com/jasonmoo/gearman-go/common"
 )
 
 const (

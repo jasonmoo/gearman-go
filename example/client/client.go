@@ -4,13 +4,13 @@ import (
     "log"
     "sync"
     "time"
-    "github.com/mikespook/gearman-go/client"
+    "github.com/jasonmoo/gearman-go/client"
 )
 
 func main() {
     var wg sync.WaitGroup
     // Set the autoinc id generator
-    // You can write your own id generator 
+    // You can write your own id generator
     // by implementing IdGenerator interface.
     // client.IdGen = client.NewAutoIncId()
 

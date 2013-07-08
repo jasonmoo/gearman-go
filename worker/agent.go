@@ -5,7 +5,7 @@
 package worker
 
 import (
-	"github.com/mikespook/gearman-go/common"
+	"github.com/jasonmoo/gearman-go/common"
 	"io"
 	"net"
 )

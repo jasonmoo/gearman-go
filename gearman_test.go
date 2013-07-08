@@ -3,7 +3,7 @@
 // license that can be found in the LICENSE file.
 
 /*
-This module is Gearman API for golang. 
+This module is Gearman API for golang.
 The protocol was implemented by native way.
 */
 
@@ -14,8 +14,8 @@ import (
     "sync"
     "testing"
     "strings"
-    "github.com/mikespook/gearman-go/client"
-    "github.com/mikespook/gearman-go/worker"
+    "github.com/jasonmoo/gearman-go/client"
+    "github.com/jasonmoo/gearman-go/worker"
 )
 
 const(
