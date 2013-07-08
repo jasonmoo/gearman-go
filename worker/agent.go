@@ -8,6 +8,7 @@ import (
 	"github.com/jasonmoo/gearman-go/common"
 	"io"
 	"net"
+	"time"
 )
 
 // The agent of job server.
@@ -67,14 +68,14 @@ func (a *agent) inLoop() {
 		rel, err := a.read()
 		if err != nil {
 			if err == common.ErrConnection {
-				for i := 0; i < 3 && a.worker.running; i++ {
-					if conn, err := net.Dial(common.NETWORK, a.addr); err != nil {
-						a.worker.err(common.Errorf("Reconnection: %d faild", i))
+				for a.worker.running {
+					// if we lose connection, try to reconnect once a second forever
+					if a.conn, err = net.Dial(common.NETWORK, a.addr); err != nil {
+						a.worker.err(common.Errorf("Reconnection attempt failed.  Waiting to retry..."))
+						<-time.After(time.Second)
 						continue
-					} else {
-						a.conn = conn
-						goto RESTART
 					}
+					goto RESTART
 				}
 				a.worker.err(err)
 				break
