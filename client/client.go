@@ -339,7 +339,7 @@ flag byte) (handle string) {
     default:
         datatype = common.SUBMIT_JOB_BG
     }
-    handle = client.do(funcname, data, datatype, "")
+    handle = client.do(funcname, data, datatype, IdGen.Id())
     return
 }
 
